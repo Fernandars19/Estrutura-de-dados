@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 7 </title>
+</head>
+<body>
+    <div>
+        <h1> exercicio 7 </h1>
+        <label for="text">Digite a meta:</label>
+        <input type="text" id="meta">
+        <br><br>
+        <label for="text"> Digite a quantidade de faltas: </label>
+        <input type="text" id="faltas">
+        <button onclick="bonus()"> calcular </button>
+        <p id="mensagem"></p>
+
+    </div>
+    <script>
+        function bonus(){
+            const meta = document.getElementById("meta").value;
+            const faltas = document.getElementById("faltas").value;
+            if(metas=true && faltas<2){
+                document.getElementById("mensagem").innerText="Recebe Bonus"
+            }else{
+                document.getElementById("mensagem").innerText="Sem Bonus"
+            }
+        }
+    </script>
+    
+</body>
+</html>

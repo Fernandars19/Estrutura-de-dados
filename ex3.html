@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 3 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 3 </h1>
+        <label for="text"> Digite o código: </label>
+        <input type="text" id="codigo">
+        <button onclick="verificar_cod()">Validação</button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function verificar_cod(){
+            const codigo = parseInt(document.getElementById("codigo").value);
+            if (codigo % 2 == 0){
+                document.getElementById("mensagem").innerText = "validação automática"
+            } else{
+                document.getElementById("mensagem").innerText = "validação manual"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 5 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 5 </h1>
+        <label for="text"> Digite o credito: </label>
+        <input type="text" id="credito">
+        <button onclick="calcular()"> Calcular </button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function calcular (){
+            const credito =document.getElementById("credito").value;
+            if (credito >=5000){
+                document.getElementById("mensagem").innerText ="Crédito Aprovado";
+            } else if (credito >=3000){
+                document.getElementById("mensagem").innerText="Análise manual";
+            }else {
+                document.getElementById("mensagem").innerText="Crédito Negado";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 12 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 12 </h1>
+        <label for="text"> Digite sua idade: </label>
+        <input type="number" id="idade">
+        <br><br>
+        <label for="text"> Digite seu CPF ou RG: </label>
+        <input type="number" id="Doc_val">
+        <br><br>
+        <label for="text"> Digite seu Cad: </label>
+        <input type="text" id="Cad_ativo">
+        <br><br>
+        <button onclick="acessar()"> Acessar </button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function acessar(){
+            const idade = document.getElementById("idade").value;
+            const Doc_val = document.getElementById("Doc_val").value;
+            const Cad_ativo = document.getElementById("Cad_ativo").value;
+
+            if (idade>=18 && Doc_val !=="" && Cad_ativo !==""){
+                document.getElementById("mensagem").innerText="Acesso Liberado"
+            }else{
+                document.getElementById("mensagem").innerText="Acesso Negado"
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

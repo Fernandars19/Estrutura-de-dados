@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 6 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 6 </h1>
+        <label for="text"> Digite o valor da venda: </label>
+        <input type="text" id="venda">
+        <button onclick="calcular()"> Calcular </button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function calcular(){
+            const venda = document.getElementById("venda").value;
+
+            if(venda >= 10000){
+                const vendaComissao = venda * 0.07;
+                document.getElementById("mensagem").innerText=" A comissão é de " + vendaComissao.toFixed(0); 
+                //Tofixed é para definir casas decimais.
+
+            }
+            else if(venda < 10000){
+                const vendaComissao2 = venda * 0.05;
+                document.getElementById("mensagem").innerText="A comissão é de " + vendaComissao2;
+            }
+            }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 1 </title>
+</head>
+<body>
+    <div>
+        <h1> EXERCICIO 1 </h1>
+        <label for="text"> Digite o valor de compra: </label> <!-- texto na frente da caixa -->
+        <input type="number" id="valor" placeholder="digite aqui"> <!-- tipo de valor, placeholder é o texto dentro da caixa -->
+        <br><br> <!-- Pular linha -->
+        <button onclick="calcular()">Calcular</button> <!-- calcular vai ser utilizado na função -->
+        <h3 id="resultado"></h3>
+    </div>
+    
+    <script>
+         function calcular() {
+      const valor = parseFloat(document.getElementById("valor").value); //getElementById é um método do 
+      // JavaScript usado para pegar um elemento do HTML pelo ID.
+      //parsefloat serve para converter um texto em numero decimal, pois por mais que colocamos 
+      // o tipo no html ele ainda vem como string
+      //const é uma constante.
+
+      const desconto = 10; // desconto fixo de 10%
+      let mensagem = "";
+
+      if (valor >= 100) {
+        const valorDesconto = valor * (desconto / 100);
+        const valorFinal = valor - valorDesconto;
+
+        mensagem = "Valor final com 10% de desconto: R$ " + valorFinal.toFixed(2);
+      } else {
+        mensagem = "Compras abaixo de R$100 não recebem desconto.";
+      }
+      document.getElementById("resultado").innerText = mensagem;
+    }   
+    </script>
+</body>
+</html>
