@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 2 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 2 </h1>
+        <label for="text"> Digite a senha: </label>
+        <input type="password" id="senha">
+        <br><br>
+         <button onclick="senha_cad()">Entrar</button>
+         <p id="mensagem"></p>
+    </div>
+    <script>
+        function senha_cad(){
+            const senha_cad = "1234";
+            const senha = document.getElementById("senha").value;
+
+         if (senha == senha_cad) {
+                document.getElementById("mensagem").innerText = "Acesso permitido ✅";
+        } else {
+                document.getElementById("mensagem").innerText = "Senha incorreta ❌";
+               }
+
+        }
+        
+    </script>
+</body>
+</html>

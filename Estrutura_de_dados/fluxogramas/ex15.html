@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 15 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 15 </h1>
+        <label for="text"> Digite o valor da compra: </label>
+        <input type="text" id="compra">
+        <br><br>
+        <label for="text"> Digite o CPF cadastrado: </label>
+        <input type="text" id="CPF">
+        <br><br>
+        <label for="text"> É cliente VIP: </label>
+        <input type="checkbox" id="vip">
+        <br><br>
+        <button onclick="analise()"> Analisar </button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function analise(){
+            const compra = Number(document.getElementById("compra").value);
+            const CPF = Number (document.getElementById("CPF").value);
+            const cliente_VIP = document.getElementById("vip").checked;
+            const inadimplente = true;
+
+            if (compra >300 || (cliente_VIP && !inadimplente)){
+                document.getElementById("mensagem").innerText="Tem desconto";
+            }else{
+                document.getElementById("mensagem").innerText="Não tem desconto";
+
+            }
+        }
+    </script>
+    
+</body>
+</html>

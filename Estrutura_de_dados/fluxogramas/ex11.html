@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 11 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 11 </h1>
+        <label for="text"> Digite a pontuação: </label>
+        <input type="text" id="pont">
+        <button onclick="consulta()"> Consultar </button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function consulta(){
+            const pont = document.getElementById("pont").value;
+            if (pont >=90){
+                document.getElementById("mensagem").innerText="Excelente"
+            }else if (pont>=70){
+                document.getElementById("mensagem").innerText="Bom"
+            }else if (pont >=50){
+                document.getElementById("mensagem").innerText="Regular"
+            }else{
+                document.getElementById("mensagem").innerText="Insuficiente"
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

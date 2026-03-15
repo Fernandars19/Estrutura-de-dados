@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 8 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 8 </h1>
+        <label for="text"> Digite seu CPF: </label>
+        <input type="text" id="cpf" maxlength="11">
+        <button onclick="acessar()"> Acessar </button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function acessar(){
+            const cpf = document.getElementById("cpf").value;
+            const pago = true;
+
+            if (cpf !=="" && pago==true ){ //!=="" serve para ver se o campo foi preenchido corretamente sem 
+            // expecificar oq eu tem que ter
+                document.getElementById("mensagem").innerText ="Acesso Premium";
+            }else{
+                document.getElementById("mensagem").innerText ="Acesso Negado";
+            }
+        }
+    </script>
+    
+</body>
+</html>

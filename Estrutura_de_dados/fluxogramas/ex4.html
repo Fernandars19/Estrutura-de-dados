@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 4 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 4 </h1>
+        <label for="text"> Digite o valor da compra: </label>
+        <input type="text" id="v_compra">
+        <button onclick="calcular()"> Calcular</button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function calcular(){
+            const v_compra = document.getElementById("v_compra").value;
+
+            if(v_compra >1000){
+                document.getElementById("mensagem").innerText =" cliente Ouro";
+            }else if (v_compra >=500){
+                document.getElementById("mensagem").innerText = "cliente prata";
+            }else{
+                document.getElementById("mensagem").innerText = "cliente Bronze";
+            }
+
+        }
+    </script>
+</body>
+</html>

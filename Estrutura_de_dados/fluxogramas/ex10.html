@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 10 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 10 </h1>
+        <label for="text"> Valor da compra: </label>
+        <input type="text" id="v_c">
+        <br><br>
+        <label for="text"> É vip: </label>
+        <input type="checkbox" id="vip">
+        <br><br>
+        <button onclick="consultar()"> Consultar frete </button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function consultar(){
+            const v_c = document.getElementById("v_c").value;
+            const cliente_vip=document.getElementById("vip").checked;
+            if (v_c >=200){
+                document.getElementById("mensagem").innerText="Frete Grátis";
+            }else if(cliente_vip){
+                document.getElementById("mensagem").innerText="Frete R$10,00";
+            }else{
+                document.getElementById("mensagem").innerText="Frete R$20,00";
+            }
+        }
+    </script>
+
+</body>
+</html>

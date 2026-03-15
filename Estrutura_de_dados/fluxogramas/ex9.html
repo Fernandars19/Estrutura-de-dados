@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercicio 9 </title>
+</head>
+<body>
+    <div>
+        <h1> Exercicio 9 </h1>
+        <label for="text"> Digite a quantidade do produto: </label>
+        <input type="number" id="produto">
+        <br><br>
+        <label for="text"> O produto esta ativo: </label>
+        <input type="checkbox" id="ativo">
+        <br><br>
+        <button onclick="consultar()"> Consultar </button>
+        <p id="mensagem"></p>
+    </div>
+    <script>
+        function consultar(){
+            const produto = document.getElementById("produto").value;
+            const ativo  = document.getElementById("ativo").checked;
+            if (produto>0 && ativo){
+                document.getElementById("mensagem").innerText="Venda liberada"
+            }else{
+                document.getElementById("mensagem").innerText="Venda Bloqueada"
+            }
+        }
+    </script>
+    
+</body>
+</html>
